@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OC展示模板</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="profile"></div>
+    <div class="banner-top">
+        <img src="tx.jpg" alt="头像" class="avatar" />
+        <div class="intro-text-box">
+            <span class="intro-text">满满的OC介绍~</span>
+            <span class="intro-text1">>>你好我是满满!这里是我的OC展示页面!</span>
+            <span class="intro-text2">>>以下分别为OC1、OC2、OC3、OC4</span>
+        </div>
+        <div class="banner-top1">
+            <span class="OC1">OC1:-----------------</span>
+            <span class="OC2">OC2:-----------------</span>
+            <span class="OC3">OC3:-----------------</span>
+            <span class="OC4">OC4:-----------------</span>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="banner-bottom"></div>
+    <!-- 背景模糊层 -->
+    <div class="background"></div>
+    <div class="blur-layer"></div>
+    <!-- 粒子背景层 -->
+    <div id="particles-js"></div>
+    <!-- 页面标题 -->
+    <h1 class="title">OC展示模板</h1>
+    <!-- 卡片容器 -->
+    <div class="card-list" id="card-list"></div>
+    <!-- 粒子.js库 -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 30 },
+                size: { value: 2 },
+                color: { value: "#ffffff" },
+                opacity: { value: 0.1 },
+                move: { enable: true, speed: 0.5 }
+            },
+            interactivity: {
+                events: { onhover: { enable: false } }
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

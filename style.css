@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    padding: 60px;
+    background: url("bj1.jpg");
+    background-size: cover;
+    font-family: "Segoe UI", sans-serif;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.banner-top {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 500px;
+    height: 160px;
+    background: rgba(0, 34, 206, 0.6);
+    border-radius: 0px;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    margin-top: -60px;
+
+    /* 新增：浮动动画 */
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+    transform: translateY(-10px) scale(1.05);
+    /* 上浮且放大一点 */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+    /* 加个阴影更有层次 */
+
+    /* 鼠标悬停时暂停浮动动画（可选） */
+    animation-play-state: paused;
+}
+
+/* 浮动关键帧 */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.intro-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.intro-text {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: -90px;
+}
+
+.intro-text1 {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.intro-text2 {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.banner-top1 {
+    position: absolute;
+    bottom: -70px;
+    left: 68%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.39);
+    border-radius: 0px;
+    backdrop-filter: blur(3px);
+    z-index: 1;
+
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.banner-bottom {
+    position: absolute;
+    bottom: 110px;
+    left: 68%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.701);
+    border-radius: 0px;
+    backdrop-filter: blur(3px);
+    z-index: 0;
+}
+
+
+/* 背景图与模糊层 */
+.background {
+    position: fixed;
+    inset: 0;
+    background: url('bj1.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -2;
+}
+
+.blur-layer {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+}
+
+.title {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+    transform: translateY(-120px);
+    font-size: 32px;
+}
+
+.card-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 100px;
+    margin-top: 100px;
+    left: 18%;
+    position: relative;
+}
+
+.card {
+    width: var(--w);
+    height: var(--h);
+    margin-left: -60px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.card:hover {
+    transform: translateY(-30px) scale(1.1);
+    z-index: 10;
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    animation: glow 1.5s ease-in-out infinite;
+}
+
+.card img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    display: block;
+}
+
+.card p {
+    margin: 10px;
+    color: #eee;
+    font-size: 14px;
+    text-align: center;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+body {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 12px 30px rgba(255, 255, 255, 0.587), 0 0 40px rgba(255, 255, 255, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 20px 40px rgba(255, 255, 255, 0.687), 0 0 60px rgba(255, 255, 255, 0.4);
+    }
+}
